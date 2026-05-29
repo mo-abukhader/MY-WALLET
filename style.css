@@ -137,9 +137,13 @@ html, body {
     font-size: 17px;
     line-height: 1.2;
     letter-spacing: -0.5px;
+    color: #f97316;
     background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
 }
 
 .app-subtitle {
