@@ -60,6 +60,14 @@ html, body {
     align-items: center;
 }
 
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="ltr"] {
+    text-align: left;
+}
+
 /* ----------------------------------------------------
    App Container & Phone Mockup
 ------------------------------------------------------- */
@@ -90,7 +98,7 @@ html, body {
    Header Styles
 ------------------------------------------------------- */
 .app-header {
-    height: 70px;
+    height: 80px;
     background: rgba(11, 15, 25, 0.85);
     backdrop-filter: blur(10px);
     display: flex;
@@ -105,20 +113,20 @@ html, body {
 .header-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .icon-logo {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     color: var(--color-accent);
     filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.2));
 }
 
 .app-logo-img {
-    width: 34px;
-    height: 34px;
-    border-radius: 9px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
     object-fit: cover;
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
@@ -128,26 +136,24 @@ html, body {
 .logo-text-group {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 3px;
 }
 
 .logo-text {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 17px;
+    font-size: 19px;
     line-height: 1.2;
     letter-spacing: -0.5px;
-    color: #f97316;
+    color: #f97316; /* لون برتقالي ثابت كبديل في حال عدم دعم التدرج */
     background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-}
-
 .app-subtitle {
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 500;
     color: var(--text-muted);
     margin: 0;
@@ -156,9 +162,9 @@ html, body {
 .btn-settings-header {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.07);
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
+    width: 44px; /* Touch target size optimized */
+    height: 44px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,8 +186,8 @@ html, body {
 }
 
 .icon-gear {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
     transition: transform 0.4s ease;
 }
 
@@ -254,7 +260,7 @@ html, body {
 }
 
 .balance-title {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--text-muted);
     letter-spacing: 0.5px;
@@ -265,7 +271,7 @@ html, body {
 .balance-amount {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 34px;
+    font-size: 38px;
     margin-bottom: 16px;
     display: flex;
     align-items: baseline;
@@ -273,7 +279,7 @@ html, body {
 }
 
 .balance-amount .currency {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--color-accent);
 }
@@ -295,14 +301,14 @@ html, body {
 }
 
 .quick-stat-label {
-    font-size: 11px;
+    font-size: 13px;
     color: var(--text-muted);
     display: block;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
 
 .quick-stat-value {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     font-family: var(--font-heading);
 }
@@ -321,7 +327,7 @@ html, body {
 }
 
 .section-title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--text-white);
     font-family: var(--font-heading);
@@ -333,25 +339,25 @@ html, body {
     color: var(--color-accent);
     font-family: var(--font-body);
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
-    padding: 4px 8px;
+    padding: 6px 12px;
 }
 
 .wallets-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 24px;
 }
 
 .wallet-card {
     background: var(--card-white);
     border-radius: var(--radius-md);
-    padding: 12px 10px;
+    padding: 16px 12px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     box-shadow: var(--shadow-soft);
     border-top: 4px solid var(--text-muted);
     transition: var(--transition-smooth);
@@ -363,8 +369,8 @@ html, body {
 }
 
 .wallet-icon-wrapper {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -372,8 +378,8 @@ html, body {
 }
 
 .wallet-card-icon {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
 }
 
 .wallet-card-info {
@@ -382,17 +388,17 @@ html, body {
 }
 
 .wallet-card-name {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--text-secondary);
-    margin-bottom: 2px;
+    margin-bottom: 3px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .wallet-card-bal {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     font-family: var(--font-heading);
     color: var(--text-primary);
@@ -422,22 +428,22 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .stat-meta {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--text-muted);
 }
 
 .stat-percentage {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--color-accent);
 }
 
 .progress-bar-container {
-    height: 8px;
+    height: 10px;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 10px;
     overflow: hidden;
@@ -463,7 +469,7 @@ html, body {
 .trans-item {
     background: var(--card-white);
     border-radius: var(--radius-md);
-    padding: 14px 16px;
+    padding: 18px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -488,20 +494,20 @@ html, body {
 .trans-right {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     flex: 1;
     min-width: 0;
 }
 
 .trans-cat-icon {
-    width: 38px;
-    height: 38px;
+    width: 44px; /* Touch target minimum optimized */
+    height: 44px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     flex-shrink: 0;
 }
 
@@ -522,10 +528,10 @@ html, body {
 }
 
 .trans-desc {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 2px;
+    margin-bottom: 3px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -534,15 +540,15 @@ html, body {
 .trans-meta-row {
     display: flex;
     align-items: center;
-    gap: 6px;
-    font-size: 10px;
+    gap: 8px;
+    font-size: 12px;
     color: var(--text-secondary);
 }
 
 .trans-badge-wallet {
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 500;
-    padding: 1px 6px;
+    padding: 2px 8px;
     border-radius: 12px;
     background: #f1f5f9;
 }
@@ -554,14 +560,14 @@ html, body {
 .trans-left {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     flex-shrink: 0;
 }
 
 .trans-amount-text {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     white-space: nowrap;
 }
 
@@ -577,7 +583,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6px;
+    padding: 10px; /* Touch target optimized */
     border-radius: 50%;
     transition: var(--transition-smooth);
 }
@@ -588,8 +594,8 @@ html, body {
 }
 
 .delete-btn-icon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 }
 
 /* Empty State Styling */
@@ -677,8 +683,8 @@ html, body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-white);
     border-radius: var(--radius-sm);
-    padding: 8px;
-    font-size: 11px;
+    padding: 12px;
+    font-size: 13px;
     font-family: var(--font-body);
     outline: none;
     transition: var(--transition-smooth);
@@ -692,16 +698,16 @@ html, body {
 .filter-actions {
     display: flex;
     justify-content: flex-end;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .btn-secondary-sm {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.15);
     color: var(--text-muted);
-    padding: 4px 10px;
-    font-size: 10px;
-    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 12px;
+    border-radius: 6px;
     cursor: pointer;
     font-family: var(--font-body);
 }
@@ -714,9 +720,9 @@ html, body {
 .badge-count {
     background: rgba(245, 158, 11, 0.12);
     color: var(--color-accent);
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
-    padding: 3px 10px;
+    padding: 4px 12px;
     border-radius: 20px;
 }
 
@@ -1083,10 +1089,10 @@ html, body {
 .btn-primary, .btn-success, .btn-danger {
     border: none;
     border-radius: var(--radius-md);
-    padding: 12px 20px;
+    padding: 16px 24px;
     font-family: var(--font-body);
     font-weight: 700;
-    font-size: 13px;
+    font-size: 15px;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -1122,10 +1128,10 @@ html, body {
     border: none;
     border-radius: var(--radius-sm);
     color: var(--text-white);
-    padding: 8px 16px;
+    padding: 12px 20px;
     font-family: var(--font-body);
     font-weight: 700;
-    font-size: 11px;
+    font-size: 13px;
     cursor: pointer;
 }
 
@@ -1139,7 +1145,7 @@ html, body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 72px;
+    height: 80px;
     background: rgba(11, 15, 25, 0.9);
     backdrop-filter: blur(15px);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -1158,7 +1164,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 5px;
     cursor: pointer;
     flex: 1;
     height: 100%;
@@ -1181,13 +1187,13 @@ html[dir="ltr"] .tab-item:nth-child(3) {
 }
 
 .tab-icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     transition: var(--transition-smooth);
 }
 
 .tab-label {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 700;
     font-family: var(--font-body);
 }
@@ -1207,11 +1213,11 @@ html[dir="ltr"] .tab-item:nth-child(3) {
 ------------------------------------------------------- */
 .fab-btn {
     position: absolute;
-    bottom: 36px; /* Centered beautifully half-in, half-out of the 72px tab bar */
+    bottom: 40px; /* Centered beautifully half-in, half-out of the 80px tab bar */
     left: 50%;
     transform: translateX(-50%);
-    width: 54px;
-    height: 54px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--color-accent) 0%, #d97706 100%);
     color: var(--text-white);
@@ -1231,8 +1237,8 @@ html[dir="ltr"] .tab-item:nth-child(3) {
 }
 
 .icon-fab {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
 }
 
 /* ----------------------------------------------------
@@ -1291,7 +1297,7 @@ html[dir="ltr"] .tab-item:nth-child(3) {
 }
 
 .modal-title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 800;
     color: var(--text-white);
     font-family: var(--font-heading);
@@ -1300,8 +1306,8 @@ html[dir="ltr"] .tab-item:nth-child(3) {
 .modal-close-btn {
     background: rgba(255, 255, 255, 0.06);
     border: none;
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1317,8 +1323,8 @@ html[dir="ltr"] .tab-item:nth-child(3) {
 }
 
 .icon-close {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
 }
 
 /* Modal Form Styles */
@@ -1335,7 +1341,7 @@ html[dir="ltr"] .tab-item:nth-child(3) {
 }
 
 .form-label {
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--text-muted);
 }
@@ -1357,8 +1363,8 @@ html[dir="ltr"] .tab-item:nth-child(3) {
 .toggle-label {
     flex: 1;
     text-align: center;
-    padding: 10px 0;
-    font-size: 12px;
+    padding: 14px 0;
+    font-size: 14px;
     font-weight: 700;
     cursor: pointer;
     border-radius: 8px;
@@ -1391,12 +1397,12 @@ html[dir="ltr"] .tab-item:nth-child(3) {
     background: rgba(255, 255, 255, 0.05);
     border: 1.5px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-md);
-    padding: 14px 16px;
-    padding-left: 50px;
+    padding: 16px 20px;
+    padding-left: 60px;
     color: var(--text-white);
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 22px;
+    font-size: 26px;
     text-align: left;
     outline: none;
     direction: ltr; /* Keeps numbers standard */
@@ -1410,8 +1416,8 @@ html[dir="ltr"] .tab-item:nth-child(3) {
 
 .amount-currency-label {
     position: absolute;
-    left: 16px;
-    font-size: 14px;
+    left: 20px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--color-accent);
 }
